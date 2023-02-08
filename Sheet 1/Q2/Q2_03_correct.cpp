@@ -12,9 +12,9 @@ int modulo(int num, int divisor) {
     return num + divisor;
 }
 
-// int main() {
-//     printf("%d\n", r(10, 4));
-// }
+int main() {
+    printf("%d\n", r(10, 4));
+}
 
 
 int main() { 
