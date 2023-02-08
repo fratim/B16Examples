@@ -4,13 +4,13 @@ using namespace std;
 class BernoulliDistributionA
 {
 private:
-        float p;
+    float p;
 public:
         BernoulliDistributionA(float _p):
                 p(_p) {};
         float getProbability() const {
-                return p;
-}
+        return p;
+    }
 };
 
 class BernoulliDistributionB
@@ -33,7 +33,7 @@ public:
 //     b.p = 10;
 // }
 
-// void fn_iii(BernoulliDistributionB & b){
+// void fn_iv(BernoulliDistributionB & b){
 //     b.p = 10;
 // }
 
@@ -65,7 +65,7 @@ int main(){
 
     // Part 4
     // printf("DistB probability %f \n" , DistB.p);
-    // fn_iii(DistB);
+    // fn_iv(DistB);
     // printf("DistB probability %f \n" , DistB.p);
 
     // Part 5

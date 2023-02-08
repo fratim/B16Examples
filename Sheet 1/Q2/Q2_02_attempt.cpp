@@ -12,27 +12,27 @@ int modulo(int num, int divisor) {
     return num + divisor;
 }
 
-int main() {
+int main() { 
     printf("%d\n", modulo(10, 4));
 }
-
+        
 
 // int main() { 
 
 //     int num;
 //     int divisor;
 //     int remainder;
-
+    
 //     do {
 //         printf("------------------\n");
 //         cout << "Enter num ";  
 //         cin >> num;
 //         cout << "Num is " << num << endl;  
-        
-//         cout << "Enter s ";  
+
+//         cout << "Enter divisor ";  
 //         cin >> divisor;
 //         cout << "divisor is " << divisor << endl;  
-        
+    
 //         remainder = modulo(num, divisor); 
 //         printf("Remainder: %d\n" , remainder);
 
