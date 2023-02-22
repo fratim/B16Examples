@@ -31,3 +31,8 @@
 *.exe
 *.out
 *.app
+.DS_Store
+Sheet 2/Q1tim
+.gitignore
+Sheet 2/Q4tim
+Sheet 2/Q5tim

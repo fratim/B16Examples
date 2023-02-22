@@ -104,7 +104,7 @@ T binarySearch(T arr[], T l, T r, T x)
 int main(void)
 {
     int arr[] = { 0, 0, 0, 1, 1, 1, 2, 2, 2, 4, 5, 6, 7, 8, 9};
-    int looking_for = 3;
+    int looking_for = 4;
     int n = sizeof(arr) / sizeof(arr[0]);
     int result = binarySearch(arr, 0, n - 1, looking_for);
     

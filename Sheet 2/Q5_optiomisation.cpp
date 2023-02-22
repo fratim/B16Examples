@@ -7,7 +7,7 @@ using namespace std;
 
 class Func
 {
-public:
+    public:
     Func()
     {
     }
@@ -30,7 +30,7 @@ public:
 
 class e_x_x_squared : public Func
 {
-public:
+    public:
     e_x_x_squared() {}
     e_x_x_squared(const Func &b) {}
 
@@ -42,7 +42,7 @@ public:
     double val(double x) const
     {
         return exp(x) / (x * x);
-    }
+        }
 
     double derivative(double x) const
     {
@@ -52,15 +52,15 @@ public:
 
 class Minimiser
 {
-public:
+    public:
     Minimiser(const Func &f, const double startX) : _f(f), _startX(startX)
     {
         double x = startX;
-        double precision = numeric_limits<double>::infinity();
-        int i = 0;
+        double error = numeric_limits<double>::infinity();
+            int i = 0;
         if (f.hasDerivative())
         {
-            while (precision > _endingPrecision && i++ < maxIters)
+            while (error > _endingerror && i++ < maxIters)
             {
                 // the NR rule
                 double step =
@@ -68,15 +68,15 @@ public:
                     ((f.derivative(x) + f.derivative(x + dx)) / (dx));
                 x = x - step;
                 // if the derivative is zero we can stop
-                precision = f.derivative(x);
+                error = f.derivative(x);
                 // print out convergence diagnostics
                 if ((i-1) % 10000 == 0)
                     cout << " iter : " << i
-                         << " precision : " << precision
+                         << " error : " << error
                          << " x: " << x << endl;
             }
             cout << " iter : " << i
-                         << " precision : " << precision
+                         << " error : " << error
                          << " x: " << x << endl;
 
             _minimum = f.val(x);
@@ -91,18 +91,18 @@ public:
     }
     double Minimum() const
     {
-        return _minimum;
+            return _minimum;
     }
     double MinimumLocation() const
     {
-        return _minimumX;
+            return _minimumX;
     }
 
-private:
+    private:
     Func _f;
-    double _startX;
-    double _minimum;
-    double _minimumX;
+        double _startX; 
+        double _minimum; 
+        double _minimumX; 
     double dx = 0.001;
     double _endingPrecision = 0.001;
     double stepSize = 0.1;
@@ -126,6 +126,4 @@ int main()
 
 // show how method works here
 // https://ardianumam.wordpress.com/2017/09/27/newtons-method-optimization-derivation-and-how-it-works/
-
-// uses second order taylor expansion
 
